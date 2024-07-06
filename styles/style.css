@@ -137,7 +137,8 @@ header .pr {
 header .pr .catchphrase {
   font-size: 28px;
   font-weight: 600;
-  line-height: 47px;
+  letter-spacing: 2.8px;
+  color: #333333;
 }
 @media screen and (min-width: 900px) {
   header .pr .catchphrase {
@@ -176,7 +177,83 @@ header .pr a::after {
 header .pr a p {
   padding: 18.5px 0 18.5px 0;
   line-height: 24px;
+  letter-spacing: 2.4px;
   color: white;
+}
+
+main {
+  margin-top: 89px;
+}
+main .reason h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 2.8px;
+  color: #333333;
+  margin-bottom: 62px;
+  position: relative;
+}
+main .reason h2::after {
+  content: "";
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #333333;
+}
+main .reason .container {
+  margin-top: 62px;
+  background-color: #FF2A2A;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 358px;
+}
+main .reason .container .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 359px;
+  height: 119px;
+  background-color: white;
+  padding: 0 20px;
+}
+main .reason .container .item .title {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 2.4px;
+  color: #FF2A2A;
+}
+main .reason .container .item .content {
+  font-size: 18px;
+  letter-spacing: 1.8px;
+  color: #333333;
+}
+main .reason .container .item.item1 {
+  margin-right: auto;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+main .reason .container .item.item1 img {
+  width: 87px;
+  height: 60px;
+}
+main .reason .container .item.item1 .body {
+  width: 202px;
+}
+main .reason .container .item.item2 {
+  margin-left: auto;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+main .reason .container .item.item2 img {
+  width: 51px;
+  height: 60px;
+}
+main .reason .container .item.item2 .body {
+  width: 238px;
 }
 
 @keyframes image-switch {

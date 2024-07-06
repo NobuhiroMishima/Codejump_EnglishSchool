@@ -128,7 +128,8 @@ header{
         & .catchphrase{
             font-size: 28px;
             font-weight: 600;
-            line-height: 47px;
+            letter-spacing: 2.8px;
+            color: $cBlack;
             @media screen and (min-width: $breakPoint){
                 font-size: 46px;
                 line-height: 73.6px;
@@ -166,8 +167,100 @@ header{
                 padding: 18.5px 0 18.5px 0;
                 @extend .font-24r;
                 line-height: 24px;
+                letter-spacing: 2.4px;
                 color: $cWhite;
             }
+        }
+    }
+}
+
+main{
+    margin-top: 89px;
+    & .reason{
+        h2{
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 2.8px;
+            color: $cBlack;
+            margin-bottom: 62px;
+            position: relative;
+
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: -22px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80px;
+                height: 3px;
+                background-color: $cBlack;
+
+            }
+        }
+
+        & .container{
+            margin-top: 62px;
+            background-color: $cNav;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 358px;
+
+            & .item{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 359px;
+                height: 119px;
+                background-color: $cWhite;
+                padding: 0 20px;
+
+                & .title{
+                    font-size: 24px;
+                    font-weight: 600;
+                    letter-spacing: 2.4px;
+                    color: $cNav;
+                }
+
+                & .content{
+                    font-size: 18px;
+                    letter-spacing: 1.8px;
+                    color: $cBlack;
+                }
+
+                &.item1{
+                    margin-right: auto;
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+
+                    & img{
+                        width: 87px;
+                        height: 60px;
+                    }
+
+                    & .body{
+                        width: 202px;
+                    }
+                }
+
+                &.item2{
+                    margin-left: auto;
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
+
+                    & img{
+                        width: 51px;
+                        height: 60px;
+                    }
+
+                    & .body{
+                        width: 238px;
+                    }
+                }
+            }
+
+
         }
     }
 }
