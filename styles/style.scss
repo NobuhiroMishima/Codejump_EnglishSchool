@@ -1,5 +1,30 @@
 @use 'component' as *;
 
+h2{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2.8px;
+    color: $cBlack;
+    position: relative;
+
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: -22px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background-color: $cBlack;
+
+    }
+}
+
+section{
+    margin-bottom: 83px;
+}
+
 header{
     position: relative;
     & .head-nav{
@@ -178,25 +203,7 @@ main{
     margin-top: 89px;
     & .reason{
         h2{
-            text-align: center;
-            font-size: 28px;
-            font-weight: 600;
-            letter-spacing: 2.8px;
-            color: $cBlack;
             margin-bottom: 62px;
-            position: relative;
-
-            &::after{
-                content: '';
-                position: absolute;
-                bottom: -22px;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 80px;
-                height: 3px;
-                background-color: $cBlack;
-
-            }
         }
 
         & .container{
@@ -275,6 +282,61 @@ main{
                 }
             }
 
+
+        }
+    }
+
+    & .voice{
+        h2{
+            margin-bottom: 65px;
+        }
+        & .container{
+            & .item{
+                margin-bottom: 43px;
+                & .wrap{
+                    margin: 0 16px 31px 16px;
+                    background-color: $cVoiceBg;
+                    border-radius: 15px;
+                    position: relative;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        width: 21px;
+                        height: 21px;
+                        transform: translate(-50%, 50%) rotate(45deg);
+                        background-color: $cVoiceBg;
+                    }
+
+                    & p {
+                        padding: 22px 26px 23px 22px;
+                        font-size: 16px;
+                        letter-spacing: 1.6px;
+                    }
+                }
+
+                & .icon{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    & img{
+                        background-color: $cIconBg;
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+                        margin-bottom: 9px;
+                    }
+
+                    & p{
+                        font-size: 12px;
+                        letter-spacing: 1.2px;
+                        &.name{
+                            padding-right: 32px;
+                        }
+                    }
+                }
+            }
 
         }
     }

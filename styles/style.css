@@ -13,6 +13,29 @@
   font-weight: 600;
 }
 
+h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 2.8px;
+  color: #333333;
+  position: relative;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #333333;
+}
+
+section {
+  margin-bottom: 83px;
+}
+
 header {
   position: relative;
 }
@@ -185,23 +208,7 @@ main {
   margin-top: 89px;
 }
 main .reason h2 {
-  text-align: center;
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: 2.8px;
-  color: #333333;
   margin-bottom: 62px;
-  position: relative;
-}
-main .reason h2::after {
-  content: "";
-  position: absolute;
-  bottom: -22px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background-color: #333333;
 }
 main .reason .container {
   margin-top: 62px;
@@ -274,6 +281,52 @@ main .reason .container .item.item2 img {
 }
 main .reason .container .item.item2 .body {
   width: 238px;
+}
+main .voice h2 {
+  margin-bottom: 65px;
+}
+main .voice .container .item {
+  margin-bottom: 43px;
+}
+main .voice .container .item .wrap {
+  margin: 0 16px 31px 16px;
+  background-color: #E9F1FB;
+  border-radius: 15px;
+  position: relative;
+}
+main .voice .container .item .wrap::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 21px;
+  height: 21px;
+  transform: translate(-50%, 50%) rotate(45deg);
+  background-color: #E9F1FB;
+}
+main .voice .container .item .wrap p {
+  padding: 22px 26px 23px 22px;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+}
+main .voice .container .item .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .voice .container .item .icon img {
+  background-color: #CCCCCC;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 9px;
+}
+main .voice .container .item .icon p {
+  font-size: 12px;
+  letter-spacing: 1.2px;
+}
+main .voice .container .item .icon p.name {
+  padding-right: 32px;
 }
 
 @keyframes image-switch {
