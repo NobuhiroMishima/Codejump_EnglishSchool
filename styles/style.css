@@ -1,4 +1,4 @@
-.font-28b, header .pr .catchphrase {
+.font-28b {
   font-size: 28px;
   font-weight: 600;
 }
@@ -8,6 +8,14 @@
   font-weight: 500;
 }
 
+.font-46b {
+  font-size: 46px;
+  font-weight: 600;
+}
+
+header {
+  position: relative;
+}
 header .head-nav {
   display: flex;
   justify-content: space-between;
@@ -26,12 +34,26 @@ header .head-nav .hamburger-menu {
   height: 75px;
   z-index: 10;
 }
+@media screen and (min-width: 900px) {
+  header .head-nav .hamburger-menu {
+    width: 100px;
+    height: 100px;
+  }
+}
 header .head-nav .hamburger-menu .menu-btn {
   position: absolute;
   top: 25px;
   left: 20px;
   width: 35px;
   height: 24px;
+}
+@media screen and (min-width: 900px) {
+  header .head-nav .hamburger-menu .menu-btn {
+    top: 35px;
+    left: 25px;
+    width: 50px;
+    height: 30px;
+  }
 }
 header .head-nav .hamburger-menu .menu-btn span {
   display: block;
@@ -48,12 +70,33 @@ header .head-nav .hamburger-menu .menu-btn span:nth-child(2) {
 header .head-nav .hamburger-menu .menu-btn span:nth-child(3) {
   transform: translateY(18px);
 }
+@media screen and (min-width: 900px) {
+  header .head-nav .hamburger-menu .menu-btn span {
+    width: 50px;
+  }
+  header .head-nav .hamburger-menu .menu-btn span:nth-child(1) {
+    transform: translateY(0px);
+  }
+  header .head-nav .hamburger-menu .menu-btn span:nth-child(2) {
+    transform: translateY(12px);
+  }
+  header .head-nav .hamburger-menu .menu-btn span:nth-child(3) {
+    transform: translateY(24px);
+  }
+}
 header .main-visual .img-auto {
   list-style: none;
   padding-left: 0;
   width: 100%;
   height: 300px;
   position: relative;
+}
+@media screen and (min-width: 900px) {
+  header .main-visual .img-auto {
+    width: 74%;
+    margin-left: auto;
+    height: 720px;
+  }
 }
 header .main-visual .img-auto .image {
   position: absolute;
@@ -70,21 +113,38 @@ header .main-visual .img-auto .image {
 }
 header .main-visual .img-auto .image.image1 {
   background-image: url("../images/mainvisual1.jpg");
-  animation-delay: 0s;
+  animation-delay: -1s;
 }
 header .main-visual .img-auto .image.image2 {
   background-image: url("../images/mainvisual2.jpg");
-  animation-delay: 5s;
+  animation-delay: -6s;
 }
 header .main-visual .img-auto .image.image3 {
   background-image: url("../images/mainvisual3.jpg");
-  animation-delay: 10s;
+  animation-delay: -11s;
 }
 header .pr {
   margin: 13px 16px;
 }
+@media screen and (min-width: 900px) {
+  header .pr {
+    position: absolute;
+    top: 385px;
+    left: 13%;
+    width: 462px;
+  }
+}
 header .pr .catchphrase {
+  font-size: 28px;
+  font-weight: 600;
   line-height: 47px;
+}
+@media screen and (min-width: 900px) {
+  header .pr .catchphrase {
+    font-size: 46px;
+    line-height: 73.6px;
+    text-shadow: 0 4px 6px white;
+  }
 }
 header .pr a {
   display: block;
@@ -96,10 +156,15 @@ header .pr a {
   box-shadow: 0 6px 0 0 #7A051C;
   margin-top: 12px;
 }
+@media screen and (min-width: 900px) {
+  header .pr a {
+    margin-top: 33px;
+  }
+}
 header .pr a::after {
   content: "";
   position: absolute;
-  top: 27.5px;
+  top: 20.5px;
   right: 30px;
   width: 18px;
   height: 18px;
@@ -110,6 +175,7 @@ header .pr a::after {
 }
 header .pr a p {
   padding: 18.5px 0 18.5px 0;
+  line-height: 24px;
   color: white;
 }
 

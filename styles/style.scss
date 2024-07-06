@@ -1,6 +1,7 @@
 @use 'component' as *;
 
 header{
+    position: relative;
     & .head-nav{
         display: flex;
         justify-content: space-between;
@@ -19,6 +20,10 @@ header{
             width: 75px;
             height: 75px;
             z-index: 10;
+            @media screen and (min-width: $breakPoint){
+                width: 100px;
+                height: 100px;
+            }
 
             & .menu-btn{
                 position: absolute;
@@ -26,6 +31,13 @@ header{
                 left: 20px;
                 width: 35px;
                 height: 24px;
+
+                @media screen and (min-width: $breakPoint){
+                    top: 35px;
+                    left: 25px;
+                    width: 50px;
+                    height: 30px;
+                }
 
                 & span{
                     display: block;
@@ -42,11 +54,22 @@ header{
                     &:nth-child(3){
                         transform: translateY(18px);
                     }
+
+                    @media screen and (min-width: $breakPoint){
+                        width: 50px;
+                        &:nth-child(1){
+                            transform: translateY(0px);
+                        }
+                        &:nth-child(2){
+                            transform: translateY(12px);
+                        }
+                        &:nth-child(3){
+                            transform: translateY(24px);
+                        }
+                    }
                 }
             }
         }
-
-        
     }
 
     & .main-visual{
@@ -56,6 +79,12 @@ header{
             width: 100%;
             height: 300px;
             position: relative;
+
+            @media screen and (min-width: $breakPoint){
+                width: 74%;
+                margin-left: auto;
+                height: 720px;
+            }
             
 
             & .image{
@@ -73,15 +102,15 @@ header{
 
                 &.image1{
                     background-image: url('../images/mainvisual1.jpg');
-                    animation-delay: 0s;
+                    animation-delay: -1s;
                 }
                 &.image2{
                     background-image: url('../images/mainvisual2.jpg');
-                    animation-delay: 5s;
+                    animation-delay: -6s;
                 }
                 &.image3{
                     background-image: url('../images/mainvisual3.jpg');
-                    animation-delay: 10s;
+                    animation-delay: -11s;
                 }
             }
         }
@@ -89,10 +118,22 @@ header{
 
     & .pr{
         margin: 13px 16px;
+        @media screen and (min-width: $breakPoint){
+            position: absolute;
+            top: 385px;
+            left: 13%;
+            width: 462px;
+        }
 
         & .catchphrase{
-            @extend .font-28b;
+            font-size: 28px;
+            font-weight: 600;
             line-height: 47px;
+            @media screen and (min-width: $breakPoint){
+                font-size: 46px;
+                line-height: 73.6px;
+                text-shadow: 0 4px 6px $cWhite;
+            }
         }
 
         & a{
@@ -104,11 +145,14 @@ header{
             border-radius: 10px;
             box-shadow: 0 6px 0 0 $cBtnShadow;
             margin-top: 12px;
+            @media screen and (min-width: $breakPoint){
+                margin-top: 33px;
+            }
 
             &::after{
                 content: '';
                 position: absolute;
-                top: 27.5px;
+                top: 20.5px;
                 right: 30px;
                 width: 18px;
                 height: 18px;
@@ -121,6 +165,7 @@ header{
             & p{
                 padding: 18.5px 0 18.5px 0;
                 @extend .font-24r;
+                line-height: 24px;
                 color: $cWhite;
             }
         }
