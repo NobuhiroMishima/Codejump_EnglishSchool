@@ -210,6 +210,11 @@ main {
 main .reason h2 {
   margin-bottom: 62px;
 }
+@media screen and (min-width: 900px) {
+  main .reason h2 {
+    margin-bottom: 103px;
+  }
+}
 main .reason .container {
   margin-top: 62px;
   background-color: #FF2A2A;
@@ -285,8 +290,22 @@ main .reason .container .item.item2 .body {
 main .voice h2 {
   margin-bottom: 65px;
 }
+@media screen and (min-width: 900px) {
+  main .voice h2 {
+    margin-bottom: 107px;
+  }
+}
 main .voice .container .item {
   margin-bottom: 43px;
+}
+@media screen and (min-width: 900px) {
+  main .voice .container .item {
+    max-width: 860px;
+    margin: 0 auto;
+    margin-bottom: 63px;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 main .voice .container .item .wrap {
   margin: 0 16px 31px 16px;
@@ -298,16 +317,53 @@ main .voice .container .item .wrap::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 50%;
   width: 21px;
   height: 21px;
-  transform: translate(-50%, 50%) rotate(45deg);
   background-color: #E9F1FB;
+}
+@media screen and (min-width: 900px) {
+  main .voice .container .item .wrap {
+    width: 514px;
+  }
 }
 main .voice .container .item .wrap p {
   padding: 22px 26px 23px 22px;
   font-size: 16px;
   letter-spacing: 1.6px;
+}
+@media screen and (min-width: 900px) {
+  main .voice .container .item.left {
+    flex-direction: row-reverse;
+    justify-content: flex-first;
+  }
+}
+main .voice .container .item.left .wrap::after {
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(45deg);
+}
+@media screen and (min-width: 900px) {
+  main .voice .container .item.left .wrap {
+    margin-left: 26px;
+  }
+  main .voice .container .item.left .wrap::after {
+    left: 0;
+    bottom: 32px;
+    transform: translate(-50%, 0) rotate(45deg);
+  }
+}
+main .voice .container .item.right .wrap::after {
+  right: 50%;
+  transform: translate(50%, 50%) rotate(45deg);
+}
+@media screen and (min-width: 900px) {
+  main .voice .container .item.right .wrap {
+    margin-right: 26px;
+  }
+  main .voice .container .item.right .wrap::after {
+    right: 0;
+    bottom: 32px;
+    transform: translate(50%, 0) rotate(45deg);
+  }
 }
 main .voice .container .item .icon {
   display: flex;

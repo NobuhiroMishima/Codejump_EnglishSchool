@@ -204,6 +204,9 @@ main{
     & .reason{
         h2{
             margin-bottom: 62px;
+            @media screen and (min-width:$breakPoint){
+                margin-bottom: 103px;
+            }
         }
 
         & .container{
@@ -289,10 +292,22 @@ main{
     & .voice{
         h2{
             margin-bottom: 65px;
+            @media screen and (min-width:$breakPoint){
+                margin-bottom: 107px;
+            }
         }
         & .container{
             & .item{
                 margin-bottom: 43px;
+                
+                @media screen and (min-width:$breakPoint){
+                    max-width: $contentMaxWidth;
+                    margin: 0 auto;
+                    margin-bottom: 63px;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
                 & .wrap{
                     margin: 0 16px 31px 16px;
                     background-color: $cVoiceBg;
@@ -302,11 +317,12 @@ main{
                         content: '';
                         position: absolute;
                         bottom: 0;
-                        left: 50%;
                         width: 21px;
                         height: 21px;
-                        transform: translate(-50%, 50%) rotate(45deg);
                         background-color: $cVoiceBg;
+                    }
+                    @media screen and (min-width:$breakPoint){
+                        width: 514px;
                     }
 
                     & p {
@@ -315,6 +331,45 @@ main{
                         letter-spacing: 1.6px;
                     }
                 }
+                &.left{
+                    @media screen and (min-width:$breakPoint){
+                        flex-direction: row-reverse;
+                        justify-content: flex-first;
+                    }
+                    & .wrap{
+                        &::after{
+                            left: 50%;
+                            transform: translate(-50%, 50%) rotate(45deg);
+                        }
+                        @media screen and (min-width:$breakPoint){
+                            margin-left: 26px;
+                            &::after{
+                                left: 0;
+                                bottom: 32px;
+                                transform: translate(-50%, 0) rotate(45deg);
+                            }
+                        }
+                    }
+                }
+                &.right{
+                    & .wrap{
+                        &::after{
+                            right: 50%;
+                            transform: translate(50%, 50%) rotate(45deg);
+                        }
+                        @media screen and (min-width:$breakPoint){
+                            margin-right: 26px;
+                            &::after{
+                                right: 0;
+                                bottom: 32px;
+                                transform: translate(50%, 0) rotate(45deg);
+                            }
+                        }
+                        
+                    }
+
+                }
+
 
                 & .icon{
                     display: flex;
