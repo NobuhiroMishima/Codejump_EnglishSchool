@@ -206,15 +206,27 @@ main{
             flex-direction: column;
             justify-content: space-evenly;
             height: 358px;
+            @media screen and (min-width:$breakPoint){
+                height: 600px;
+                justify-content: center;
+            }
 
             & .item{
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
                 width: 359px;
                 height: 119px;
                 background-color: $cWhite;
                 padding: 0 20px;
+                @media screen and (min-width:$breakPoint){
+                    width: 700px;
+                    height: 200px;
+                }
+
+                & img{
+                    margin-right: 30px;
+                }
 
                 & .title{
                     font-size: 24px;
@@ -233,6 +245,9 @@ main{
                     margin-right: auto;
                     border-top-right-radius: 20px;
                     border-bottom-right-radius: 20px;
+                    @media screen and (min-width:$breakPoint){
+                        margin-bottom: 40px;
+                    }
 
                     & img{
                         width: 87px;

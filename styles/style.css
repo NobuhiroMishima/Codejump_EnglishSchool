@@ -211,14 +211,29 @@ main .reason .container {
   justify-content: space-evenly;
   height: 358px;
 }
+@media screen and (min-width: 900px) {
+  main .reason .container {
+    height: 600px;
+    justify-content: center;
+  }
+}
 main .reason .container .item {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 359px;
   height: 119px;
   background-color: white;
   padding: 0 20px;
+}
+@media screen and (min-width: 900px) {
+  main .reason .container .item {
+    width: 700px;
+    height: 200px;
+  }
+}
+main .reason .container .item img {
+  margin-right: 30px;
 }
 main .reason .container .item .title {
   font-size: 24px;
@@ -235,6 +250,11 @@ main .reason .container .item.item1 {
   margin-right: auto;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+@media screen and (min-width: 900px) {
+  main .reason .container .item.item1 {
+    margin-bottom: 40px;
+  }
 }
 main .reason .container .item.item1 img {
   width: 87px;
