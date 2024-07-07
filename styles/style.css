@@ -21,6 +21,12 @@ h2 {
   color: #333333;
   position: relative;
 }
+@media screen and (min-width: 900px) {
+  h2 {
+    font-size: 36px;
+    letter-spacing: 3.6px;
+  }
+}
 h2::after {
   content: "";
   position: absolute;
@@ -383,6 +389,70 @@ main .voice .container .item .icon p {
 }
 main .voice .container .item .icon p.name {
   padding-right: 32px;
+}
+main .summary {
+  background-color: #E8E8E8;
+  background-image: url("../images/bg.gif");
+  background-repeat: repeat;
+}
+main .summary h2 {
+  padding-top: 63px;
+  margin-bottom: 65px;
+}
+@media screen and (min-width: 900px) {
+  main .summary h2 {
+    margin-bottom: 107px;
+  }
+}
+main .summary .container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+}
+@media screen and (min-width: 900px) {
+  main .summary .container {
+    max-width: 860px;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+main .summary .container .item {
+  margin-bottom: 32px;
+  padding: 33px;
+  background-color: white;
+  border-radius: 20px;
+}
+main .summary .container .item:last-child {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 900px) {
+  main .summary .container .item {
+    width: 46.5%;
+    padding: 63px;
+  }
+  main .summary .container .item:nth-child(3) {
+    margin-bottom: 60px;
+  }
+}
+main .summary .container .item h3 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 2.4px;
+  margin-bottom: 23px;
+}
+main .summary .container .item .sub-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  margin-bottom: 33px;
+}
+main .summary .container .item .body {
+  font-size: 16px;
+  letter-spacing: 1.6px;
 }
 
 @keyframes image-switch {
