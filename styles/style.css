@@ -16,7 +16,7 @@
 h2 {
   text-align: center;
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2.8px;
   color: #333333;
   position: relative;
@@ -165,7 +165,7 @@ header .pr {
 }
 header .pr .catchphrase {
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2.8px;
   color: #333333;
 }
@@ -255,7 +255,7 @@ main .reason .container .item img {
 }
 main .reason .container .item .title {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2.4px;
   color: #FF2A2A;
 }
@@ -439,20 +439,83 @@ main .summary .container .item:last-child {
 main .summary .container .item h3 {
   text-align: center;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2.4px;
   margin-bottom: 23px;
 }
 main .summary .container .item .sub-title {
   text-align: center;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1.6px;
   margin-bottom: 33px;
 }
 main .summary .container .item .body {
   font-size: 16px;
   letter-spacing: 1.6px;
+}
+main .app {
+  text-align: center;
+}
+@media screen and (min-width: 900px) {
+  main .app {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+}
+main .app .catchphrase {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  padding: 0 13px 0 14px;
+  margin-bottom: 11px;
+}
+@media screen and (min-width: 900px) {
+  main .app .catchphrase {
+    font-size: 32px;
+    letter-spacing: 3.2px;
+  }
+}
+main .app .present {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+  padding: 0 20px 0 21px;
+  margin-bottom: 61px;
+}
+@media screen and (min-width: 900px) {
+  main .app .present {
+    font-size: 18px;
+    letter-spacing: 1.8px;
+  }
+}
+main .app .btn {
+  display: block;
+  border-radius: 40px;
+  text-decoration: none;
+  margin: 0 16px;
+  background-color: #FF2A2A;
+}
+@media screen and (min-width: 900px) {
+  main .app .btn {
+    margin: 0;
+  }
+}
+main .app .btn p {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 2.4px;
+  color: white;
+  padding: 18px 54px 19px 54px;
+}
+@media screen and (min-width: 900px) {
+  main .app .btn p {
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 2.8px;
+    padding: 19px 0 20px 0;
+  }
 }
 
 @keyframes image-switch {

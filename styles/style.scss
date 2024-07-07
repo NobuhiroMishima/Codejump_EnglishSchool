@@ -3,7 +3,7 @@
 h2{
     text-align: center;
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 2.8px;
     color: $cBlack;
     position: relative;
@@ -156,7 +156,7 @@ header{
 
         & .catchphrase{
             font-size: 28px;
-            font-weight: 600;
+            font-weight: 700;
             letter-spacing: 2.8px;
             color: $cBlack;
             @media screen and (min-width: $breakPoint){
@@ -244,7 +244,7 @@ main{
 
                 & .title{
                     font-size: 24px;
-                    font-weight: 600;
+                    font-weight: 700;
                     letter-spacing: 2.4px;
                     color: $cNav;
                 }
@@ -448,7 +448,7 @@ main{
                 & h3{
                     text-align: center;
                     font-size: 24px;
-                    font-weight: 600;
+                    font-weight: 700;
                     letter-spacing: 2.4px;
                     margin-bottom: 23px;
                 }
@@ -456,7 +456,7 @@ main{
                 & .sub-title{
                     text-align: center;
                     font-size: 16px;
-                    font-weight: 600;
+                    font-weight: 700;
                     letter-spacing: 1.6px;
                     margin-bottom: 33px;
                 }
@@ -464,6 +464,63 @@ main{
                 & .body{
                     font-size: 16px;
                     letter-spacing: 1.6px;
+                }
+            }
+        }
+    }
+
+    & .app{
+        text-align: center;
+        @media screen and (min-width:$breakPoint){
+            max-width: $contentMaxWidth;
+            margin: 0 auto;
+        }
+
+        & .catchphrase{
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 2.4px;
+            padding: 0 13px 0 14px;
+            margin-bottom: 11px;
+            @media screen and (min-width:$breakPoint){
+                font-size: 32px;
+                letter-spacing: 3.2px;
+            }
+        }
+
+        & .present{
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 1.6px;
+            padding: 0 20px 0 21px;
+            margin-bottom: 61px;
+            @media screen and (min-width:$breakPoint){
+                font-size: 18px;
+                letter-spacing: 1.8px;
+            }
+        }
+
+        & .btn{
+            display: block;
+            border-radius: 40px;
+            text-decoration: none;
+            margin: 0 16px;
+            background-color: $cNav;
+            @media screen and (min-width:$breakPoint){
+                margin: 0;
+            }
+            & p{
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 2.4px;
+                color: $cWhite;
+                padding: 18px 54px 19px 54px;
+                @media screen and (min-width:$breakPoint){
+                    font-size: 28px;
+                    line-height: 28px;
+                    letter-spacing: 2.8px;
+                    padding: 19px 0 20px 0;
                 }
             }
         }
