@@ -44,7 +44,8 @@ header{
 
         & .hamburger-menu{
             display: block;
-            position: relative;
+            position: fixed;
+            right: 0;
             background-color: $cNav;
             width: 75px;
             height: 75px;
@@ -211,6 +212,10 @@ header{
 main{
     margin-top: 89px;
     margin-bottom: 80px;
+    @media screen and (min-width:$breakPoint){
+        margin-top: 124px;
+        margin-bottom: 119px;
+    }
     & .reason{
         h2{
             margin-bottom: 62px;
@@ -315,6 +320,7 @@ main{
     }
 
     & .voice{
+        overflow: hidden;
         h2{
             margin-bottom: 65px;
             @media screen and (min-width:$breakPoint){
@@ -431,6 +437,10 @@ main{
         background-color: #E8E8E8;
         background-image: url('../images/bg.gif');
         background-repeat: repeat;
+        animation-name: bg-slide;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
 
         & h2{
             padding-top: 63px;
@@ -534,6 +544,7 @@ main{
             margin: 0 16px;
             background-color: $cNav;
             border: 3px solid $cBtn;
+            transition: all 0.3s;
             @media screen and (min-width:$breakPoint){
                 margin: 0;
             }
@@ -634,5 +645,14 @@ footer{
     }
     100%{
         opacity: 0;
+    }
+}
+
+@keyframes bg-slide{
+    0%{
+        background-position:0 0;
+    }
+    100%{
+        background-position: -700px 700px;
     }
 }

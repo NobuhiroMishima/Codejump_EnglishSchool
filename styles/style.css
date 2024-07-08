@@ -57,7 +57,8 @@ header .head-nav h1 {
 }
 header .head-nav .hamburger-menu {
   display: block;
-  position: relative;
+  position: fixed;
+  right: 0;
   background-color: #FF2A2A;
   width: 75px;
   height: 75px;
@@ -218,6 +219,12 @@ main {
   margin-top: 89px;
   margin-bottom: 80px;
 }
+@media screen and (min-width: 900px) {
+  main {
+    margin-top: 124px;
+    margin-bottom: 119px;
+  }
+}
 main .reason h2 {
   margin-bottom: 62px;
 }
@@ -309,6 +316,9 @@ main .reason .container .slide-item.item2 img {
 }
 main .reason .container .slide-item.item2 .body {
   width: 238px;
+}
+main .voice {
+  overflow: hidden;
 }
 main .voice h2 {
   margin-bottom: 65px;
@@ -416,6 +426,10 @@ main .summary {
   background-color: #E8E8E8;
   background-image: url("../images/bg.gif");
   background-repeat: repeat;
+  animation-name: bg-slide;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 main .summary h2 {
   padding-top: 63px;
@@ -518,6 +532,7 @@ main .app .btn {
   margin: 0 16px;
   background-color: #FF2A2A;
   border: 3px solid #FF0033;
+  transition: all 0.3s;
 }
 @media screen and (min-width: 900px) {
   main .app .btn {
@@ -615,5 +630,13 @@ footer .copy {
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes bg-slide {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -700px 700px;
   }
 }/*# sourceMappingURL=style.css.map */
