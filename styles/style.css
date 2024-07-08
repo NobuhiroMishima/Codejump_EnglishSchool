@@ -212,6 +212,7 @@ header .pr a p {
 
 main {
   margin-top: 89px;
+  margin-bottom: 80px;
 }
 main .reason h2 {
   margin-bottom: 62px;
@@ -516,6 +517,58 @@ main .app .btn p {
     letter-spacing: 2.8px;
     padding: 19px 0 20px 0;
   }
+}
+
+footer {
+  background-color: #E8E8E8;
+}
+footer .sitemap {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 62px 16px 65px 16px;
+}
+@media screen and (min-width: 900px) {
+  footer .sitemap {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+}
+footer .sitemap .sec {
+  width: 50%;
+}
+@media screen and (min-width: 900px) {
+  footer .sitemap .sec {
+    width: 25%;
+  }
+}
+footer .sitemap .sec:nth-child(-n+2) {
+  margin-bottom: 35px;
+}
+@media screen and (min-width: 900px) {
+  footer .sitemap .sec:nth-child(-n+2) {
+    margin-bottom: 0;
+  }
+}
+footer .sitemap .sec p {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+footer .sitemap .sec ul {
+  list-style: none;
+  padding-left: 10px;
+}
+footer .sitemap .sec ul a {
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  color: #333333;
+}
+footer .copy {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-bottom: 21px;
 }
 
 @keyframes image-switch {
