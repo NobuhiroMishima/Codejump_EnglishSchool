@@ -175,8 +175,13 @@ header{
             border-radius: 10px;
             box-shadow: 0 6px 0 0 $cBtnShadow;
             margin-top: 12px;
+            transition: transform 0.3s;
             @media screen and (min-width: $breakPoint){
                 margin-top: 33px;
+            }
+
+            &:hover{
+                transform: scale(1.05);
             }
 
             &::after{
@@ -507,9 +512,16 @@ main{
             text-decoration: none;
             margin: 0 16px;
             background-color: $cNav;
+            border: 3px solid $cBtn;
             @media screen and (min-width:$breakPoint){
                 margin: 0;
             }
+
+            &:hover{
+                background-color: $cWhite;
+                border: 3px solid $cBtn;
+            }
+
             & p{
                 font-size: 24px;
                 font-weight: 700;
@@ -522,6 +534,9 @@ main{
                     line-height: 28px;
                     letter-spacing: 2.8px;
                     padding: 19px 0 20px 0;
+                }
+                &:hover{
+                    color: $cBtn;
                 }
             }
         }

@@ -185,11 +185,15 @@ header .pr a {
   border-radius: 10px;
   box-shadow: 0 6px 0 0 #7A051C;
   margin-top: 12px;
+  transition: transform 0.3s;
 }
 @media screen and (min-width: 900px) {
   header .pr a {
     margin-top: 33px;
   }
+}
+header .pr a:hover {
+  transform: scale(1.05);
 }
 header .pr a::after {
   content: "";
@@ -496,11 +500,16 @@ main .app .btn {
   text-decoration: none;
   margin: 0 16px;
   background-color: #FF2A2A;
+  border: 3px solid #FF0033;
 }
 @media screen and (min-width: 900px) {
   main .app .btn {
     margin: 0;
   }
+}
+main .app .btn:hover {
+  background-color: white;
+  border: 3px solid #FF0033;
 }
 main .app .btn p {
   font-size: 24px;
@@ -517,6 +526,9 @@ main .app .btn p {
     letter-spacing: 2.8px;
     padding: 19px 0 20px 0;
   }
+}
+main .app .btn p:hover {
+  color: #FF0033;
 }
 
 footer {
