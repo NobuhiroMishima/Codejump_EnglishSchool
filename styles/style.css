@@ -248,7 +248,7 @@ main .reason .container .slide-item {
   height: 119px;
   background-color: white;
   padding: 0 20px;
-  transition: transform 0.8s, opacity 0.8s;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
   opacity: 0;
 }
 @media screen and (min-width: 900px) {
@@ -318,11 +318,16 @@ main .voice h2 {
     margin-bottom: 107px;
   }
 }
-main .voice .container .item {
+main .voice .container .fade-in-item {
   margin-bottom: 43px;
+  transform: scale(0);
+  transition: transform 0.8s ease-out;
+}
+main .voice .container .fade-in-item.inview {
+  transform: scale(1);
 }
 @media screen and (min-width: 900px) {
-  main .voice .container .item {
+  main .voice .container .fade-in-item {
     max-width: 860px;
     margin: 0 auto;
     margin-bottom: 63px;
@@ -330,13 +335,13 @@ main .voice .container .item {
     justify-content: flex-end;
   }
 }
-main .voice .container .item .wrap {
+main .voice .container .fade-in-item .wrap {
   margin: 0 16px 31px 16px;
   background-color: #E9F1FB;
   border-radius: 15px;
   position: relative;
 }
-main .voice .container .item .wrap::after {
+main .voice .container .fade-in-item .wrap::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -345,66 +350,66 @@ main .voice .container .item .wrap::after {
   background-color: #E9F1FB;
 }
 @media screen and (min-width: 900px) {
-  main .voice .container .item .wrap {
+  main .voice .container .fade-in-item .wrap {
     width: 514px;
   }
 }
-main .voice .container .item .wrap p {
+main .voice .container .fade-in-item .wrap p {
   padding: 22px 26px 23px 22px;
   font-size: 16px;
   letter-spacing: 1.6px;
 }
 @media screen and (min-width: 900px) {
-  main .voice .container .item.left {
+  main .voice .container .fade-in-item.left {
     flex-direction: row-reverse;
     justify-content: flex-first;
   }
 }
-main .voice .container .item.left .wrap::after {
+main .voice .container .fade-in-item.left .wrap::after {
   left: 50%;
   transform: translate(-50%, 50%) rotate(45deg);
 }
 @media screen and (min-width: 900px) {
-  main .voice .container .item.left .wrap {
+  main .voice .container .fade-in-item.left .wrap {
     margin-left: 26px;
   }
-  main .voice .container .item.left .wrap::after {
+  main .voice .container .fade-in-item.left .wrap::after {
     left: 0;
     bottom: 32px;
     transform: translate(-50%, 0) rotate(45deg);
   }
 }
-main .voice .container .item.right .wrap::after {
+main .voice .container .fade-in-item.right .wrap::after {
   right: 50%;
   transform: translate(50%, 50%) rotate(45deg);
 }
 @media screen and (min-width: 900px) {
-  main .voice .container .item.right .wrap {
+  main .voice .container .fade-in-item.right .wrap {
     margin-right: 26px;
   }
-  main .voice .container .item.right .wrap::after {
+  main .voice .container .fade-in-item.right .wrap::after {
     right: 0;
     bottom: 32px;
     transform: translate(50%, 0) rotate(45deg);
   }
 }
-main .voice .container .item .icon {
+main .voice .container .fade-in-item .icon {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main .voice .container .item .icon img {
+main .voice .container .fade-in-item .icon img {
   background-color: #CCCCCC;
   width: 120px;
   height: 120px;
   border-radius: 50%;
   margin-bottom: 9px;
 }
-main .voice .container .item .icon p {
+main .voice .container .fade-in-item .icon p {
   font-size: 12px;
   letter-spacing: 1.2px;
 }
-main .voice .container .item .icon p.name {
+main .voice .container .fade-in-item .icon p.name {
   padding-right: 32px;
 }
 main .summary {

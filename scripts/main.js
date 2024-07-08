@@ -1,4 +1,6 @@
 const slideIn = document.querySelectorAll('.slide-item');
+const fadeIn = document.querySelectorAll('.fade-in-item');
+
 const callback = function(entries){
     entries.forEach(entry => {
         if(entry.isIntersecting){
@@ -8,7 +10,8 @@ const callback = function(entries){
 }
 
 const io = new IntersectionObserver(callback);
-slideIn.forEach(el => io.observe(el))
+slideIn.forEach(el => io.observe(el));
+fadeIn.forEach(el => io.observe(el));
 
 
 

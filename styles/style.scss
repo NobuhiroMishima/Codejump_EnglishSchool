@@ -239,7 +239,7 @@ main{
                 height: 119px;
                 background-color: $cWhite;
                 padding: 0 20px;
-                transition: transform  0.8s, opacity 0.8s;
+                transition: transform 0.8s ease-out, opacity 0.8s ease-out;
                 opacity: 0;
                 @media screen and (min-width:$breakPoint){
                     width: 700px;
@@ -322,8 +322,14 @@ main{
             }
         }
         & .container{
-            & .item{
+            & .fade-in-item{
                 margin-bottom: 43px;
+                transform: scale(0);
+                transition: transform 0.8s ease-out;
+
+                &.inview{
+                    transform: scale(1);
+                }
                 
                 @media screen and (min-width:$breakPoint){
                     max-width: $contentMaxWidth;
