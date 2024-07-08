@@ -240,7 +240,7 @@ main .reason .container {
     justify-content: center;
   }
 }
-main .reason .container .item {
+main .reason .container .slide-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,54 +248,66 @@ main .reason .container .item {
   height: 119px;
   background-color: white;
   padding: 0 20px;
+  transition: transform 0.8s, opacity 0.8s;
+  opacity: 0;
 }
 @media screen and (min-width: 900px) {
-  main .reason .container .item {
+  main .reason .container .slide-item {
     width: 700px;
     height: 200px;
   }
 }
-main .reason .container .item img {
+main .reason .container .slide-item img {
   margin-right: 30px;
 }
-main .reason .container .item .title {
+main .reason .container .slide-item .title {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 2.4px;
   color: #FF2A2A;
 }
-main .reason .container .item .content {
+main .reason .container .slide-item .content {
   font-size: 18px;
   letter-spacing: 1.8px;
   color: #333333;
 }
-main .reason .container .item.item1 {
+main .reason .container .slide-item.item1 {
   margin-right: auto;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  transform: translateX(-100%);
 }
 @media screen and (min-width: 900px) {
-  main .reason .container .item.item1 {
+  main .reason .container .slide-item.item1 {
     margin-bottom: 40px;
   }
 }
-main .reason .container .item.item1 img {
+main .reason .container .slide-item.item1.inview {
+  transform: translateX(0);
+  opacity: 1;
+}
+main .reason .container .slide-item.item1 img {
   width: 87px;
   height: 60px;
 }
-main .reason .container .item.item1 .body {
+main .reason .container .slide-item.item1 .body {
   width: 202px;
 }
-main .reason .container .item.item2 {
+main .reason .container .slide-item.item2 {
   margin-left: auto;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  transform: translateX(100%);
 }
-main .reason .container .item.item2 img {
+main .reason .container .slide-item.item2.inview {
+  transform: translateX(0);
+  opacity: 1;
+}
+main .reason .container .slide-item.item2 img {
   width: 51px;
   height: 60px;
 }
-main .reason .container .item.item2 .body {
+main .reason .container .slide-item.item2 .body {
   width: 238px;
 }
 main .voice h2 {

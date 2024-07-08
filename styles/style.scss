@@ -231,7 +231,7 @@ main{
                 justify-content: center;
             }
 
-            & .item{
+            & .slide-item{
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -239,6 +239,8 @@ main{
                 height: 119px;
                 background-color: $cWhite;
                 padding: 0 20px;
+                transition: transform  0.8s, opacity 0.8s;
+                opacity: 0;
                 @media screen and (min-width:$breakPoint){
                     width: 700px;
                     height: 200px;
@@ -265,9 +267,17 @@ main{
                     margin-right: auto;
                     border-top-right-radius: 20px;
                     border-bottom-right-radius: 20px;
+                    transform: translateX(-100%);
                     @media screen and (min-width:$breakPoint){
                         margin-bottom: 40px;
                     }
+                    &.inview{
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+
+
+
 
                     & img{
                         width: 87px;
@@ -283,6 +293,11 @@ main{
                     margin-left: auto;
                     border-top-left-radius: 20px;
                     border-bottom-left-radius: 20px;
+                    transform: translateX(100%);
+                    &.inview{
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
 
                     & img{
                         width: 51px;
