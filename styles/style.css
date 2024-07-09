@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .font-28b {
   font-size: 28px;
   font-weight: 600;
@@ -11,6 +12,10 @@
 .font-46b {
   font-size: 46px;
   font-weight: 600;
+}
+
+body {
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
 }
 
 h2 {
@@ -260,18 +265,27 @@ main .reason .container .slide-item {
 }
 @media screen and (min-width: 900px) {
   main .reason .container .slide-item {
-    width: 700px;
+    width: 50%;
     height: 200px;
   }
 }
 main .reason .container .slide-item img {
   margin-right: 30px;
 }
+main .reason .container .slide-item .body {
+  width: auto;
+}
 main .reason .container .slide-item .title {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 2.4px;
   color: #FF2A2A;
+}
+@media screen and (min-width: 900px) {
+  main .reason .container .slide-item .title {
+    font-size: 28px;
+    letter-spacing: 2.8px;
+  }
 }
 main .reason .container .slide-item .content {
   font-size: 18px;
@@ -297,9 +311,6 @@ main .reason .container .slide-item.item1 img {
   width: 87px;
   height: 60px;
 }
-main .reason .container .slide-item.item1 .body {
-  width: 202px;
-}
 main .reason .container .slide-item.item2 {
   margin-left: auto;
   border-top-left-radius: 20px;
@@ -313,9 +324,6 @@ main .reason .container .slide-item.item2.inview {
 main .reason .container .slide-item.item2 img {
   width: 51px;
   height: 60px;
-}
-main .reason .container .slide-item.item2 .body {
-  width: 238px;
 }
 main .voice {
   overflow: hidden;
