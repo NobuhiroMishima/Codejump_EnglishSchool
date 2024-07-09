@@ -127,6 +127,10 @@ header .head-nav .hamburger-menu .menu-btn span:nth-child(3) {
   }
 }
 header .head-nav .nav-detail {
+  opacity: 0;
+  transition: all 0.8s;
+}
+header .head-nav .nav-detail ul, header .head-nav .nav-detail > a {
   display: none;
 }
 header .head-nav.open h1 {
@@ -162,7 +166,8 @@ header .head-nav.open span:nth-child(3) {
   }
 }
 header .head-nav.open .nav-detail {
-  display: block;
+  opacity: 1;
+  text-align: center;
   background-color: #FF2A2A;
   width: 100%;
   height: 100%;
@@ -170,10 +175,10 @@ header .head-nav.open .nav-detail {
   z-index: 10;
 }
 header .head-nav.open .nav-detail ul {
+  display: block;
   padding-left: 0;
   list-style: none;
-  margin: 112px auto 0 auto;
-  text-align: center;
+  margin: 112px auto 43px auto;
 }
 @media screen and (min-width: 900px) {
   header .head-nav.open .nav-detail ul {
@@ -189,6 +194,30 @@ header .head-nav.open .nav-detail ul li a {
   font-size: 16px;
   letter-spacing: 1.6px;
   font-weight: 700;
+}
+header .head-nav.open .nav-detail .apply {
+  display: inline-block;
+  position: relative;
+  border: 1px solid white;
+  margin: 0 auto;
+  text-decoration: none;
+}
+header .head-nav.open .nav-detail .apply::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+}
+header .head-nav.open .nav-detail .apply p {
+  padding: 17px 46px 19px 47px;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  font-weight: 700;
+  color: white;
 }
 header .main-visual .img-auto {
   list-style: none;
