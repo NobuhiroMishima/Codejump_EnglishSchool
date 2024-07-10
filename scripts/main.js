@@ -20,7 +20,7 @@ slideIn.forEach(el => io.observe(el));
 fadeIn.forEach(el => io.observe(el));
 
 
-//ハンバーガーメニューとハンバーガーメニューメニュー内のボタンの要素を選択
+//ハンバーガーメニューとハンバーガーメニュー内のボタンの要素を選択
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const mainContent = document.querySelectorAll('.section-jump');
 
